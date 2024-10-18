@@ -17,12 +17,12 @@ export default function Home() {
             <ProjectCard 
               title="项目1" 
               description="这是一个正在开发的项目描述"
-              link="/project/project1"
+              link="/projects/project1"
             />
             <ProjectCard 
               title="项目2" 
               description="另一个正在开发的项目描述"
-              link="/project/project2" 
+              link="/projects/project2" 
             />
             {/* 添加更多项目卡片 */}
           </div>
