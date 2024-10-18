@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
+import { MoonIcon, SunIcon, RocketIcon, FileTextIcon, PersonIcon } from "@radix-ui/react-icons"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
@@ -75,14 +75,17 @@ const NavBar = () => {
             <Link href="/" className="text-xl font-bold text-foreground">
               我的博客
             </Link>
-            <div className="space-x-6">
-              <Link href="/projects" className="text-foreground/80 hover:text-foreground transition-colors">
+            <div className="flex items-center space-x-6">
+              <Link href="/projects" className="text-foreground/80 hover:text-foreground transition-colors flex items-center">
+                <RocketIcon className="mr-2 h-4 w-4" />
                 项目
               </Link>
-              <Link href="/blog" className="text-foreground/80 hover:text-foreground transition-colors">
+              <Link href="/blog" className="text-foreground/80 hover:text-foreground transition-colors flex items-center">
+                <FileTextIcon className="mr-2 h-4 w-4" />
                 博客
               </Link>
-              <Link href="/about" className="text-foreground/80 hover:text-foreground transition-colors">
+              <Link href="/about" className="text-foreground/80 hover:text-foreground transition-colors flex items-center">
+                <PersonIcon className="mr-2 h-4 w-4" />
                 关于
               </Link>
               <ModeToggle />
