@@ -1,7 +1,6 @@
 import ProjectCard from '@/components/ProjectCard'
 import BlogCard from '@/components/BlogCard'
-import { HomeIcon, RocketLaunchIcon, NewspaperIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import { RocketLaunchIcon, NewspaperIcon } from '@heroicons/react/24/outline'
 import { getSortedPostsData } from '@/lib/posts'
 
 export default function Home() {

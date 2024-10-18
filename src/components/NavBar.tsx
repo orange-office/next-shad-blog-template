@@ -42,7 +42,6 @@ export function ModeToggle() {
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +55,6 @@ const NavBar = () => {
       } else {
         setIsVisible(true)
       }
-      setLastScrollY(currentScrollY)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })

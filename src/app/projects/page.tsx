@@ -1,7 +1,4 @@
-import ProjectCard from '@/components/ProjectCard'
-import BlogCard from '@/components/BlogCard'
-
-export default function Blog() {
+export default function Projects() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-16">

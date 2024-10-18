@@ -1,6 +1,5 @@
 import { FC, ReactNode } from 'react'
 import { format } from 'date-fns'
-import { cn } from "@/lib/utils"
 
 interface BlogLayoutProps {
   children: ReactNode

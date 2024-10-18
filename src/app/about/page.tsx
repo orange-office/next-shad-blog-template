@@ -1,6 +1,3 @@
-import ProjectCard from '@/components/ProjectCard'
-import BlogCard from '@/components/BlogCard'
-
 export default function About() {
   return (
     <main className="min-h-screen bg-background text-foreground">
