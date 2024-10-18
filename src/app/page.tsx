@@ -1,11 +1,9 @@
-import NavBar from '@/components/NavBar'
 import ProjectCard from '@/components/ProjectCard'
 import BlogCard from '@/components/BlogCard'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <NavBar />
       <div className="container mx-auto px-4 py-16">
         <div className="flex justify-end mb-4">
         </div>
