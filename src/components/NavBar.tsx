@@ -47,7 +47,11 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      if (currentScrollY > lastScrollY) {
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+      const scrollPercentage = (currentScrollY / (documentHeight - windowHeight)) * 100
+
+      if (scrollPercentage > 30) {
         setIsVisible(false)
       } else {
         setIsVisible(true)
@@ -57,7 +61,7 @@ const NavBar = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
+  }, [])
 
   return (
     <nav
