@@ -2,8 +2,12 @@ import ProjectCard from '@/components/ProjectCard'
 import BlogCard from '@/components/BlogCard'
 import { HomeIcon, RocketLaunchIcon, NewspaperIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { getSortedPostsData } from '@/lib/posts'
 
 export default function Home() {
+  const allPostsData = getSortedPostsData()
+  const recentPosts = allPostsData.slice(0, 8) // 只取最新的8篇文章
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-16">
@@ -37,55 +41,15 @@ export default function Home() {
             最近更新的博客
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <BlogCard 
-              title="博客文章1" 
-              excerpt="这是博客文章1的摘要..."
-              date="2023-04-01"
-              link="/blog/post-1"
-            />
-            <BlogCard 
-              title="博客文章2" 
-              excerpt="这是博客文章2的摘要..."
-              date="2023-03-28"
-              link="/blog/post-2"
-            />
-            <BlogCard 
-              title="博客文章3" 
-              excerpt="这是博客文章4的摘要..."
-              date="2023-04-01"
-              link="/blog/post-3"
-            />
-            <BlogCard 
-              title="博客文章4" 
-              excerpt="这是博客文章4的摘要..."
-              date="2023-03-28"
-              link="/blog/post-4"
-            />
-            <BlogCard 
-              title="博客文章1" 
-              excerpt="这是博客文章1的摘要..."
-              date="2023-04-01"
-              link="/blog/post-1"
-            />
-            <BlogCard 
-              title="博客文章2" 
-              excerpt="这是博客文章2的摘要..."
-              date="2023-03-28"
-              link="/blog/post-2"
-            />
-            <BlogCard 
-              title="博客文章3" 
-              excerpt="这是博客文章4的摘要..."
-              date="2023-04-01"
-              link="/blog/post-3"
-            />
-            <BlogCard 
-              title="博客文章4" 
-              excerpt="这是博客文章4的摘要..."
-              date="2023-03-28"
-              link="/blog/post-4"
-            />
-            {/* 添加更多博客卡片 */}
+            {recentPosts.map((post) => (
+              <BlogCard 
+                key={post.id}
+                title={post.title}
+                excerpt={post.excerpt || ''}
+                date={post.date}
+                link={`/blog/${post.id}`}
+              />
+            ))}
           </div>
         </section>
       </div>
