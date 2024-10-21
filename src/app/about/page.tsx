@@ -20,8 +20,8 @@ export default function About() {
               </Link>
             </CardHeader>
             <CardContent>
-              <p className="text-xl text-center mb-8">磁共振产品经理 | 脑科学爱好者 | Web开发爱好者</p>
-              <p className="mb-6">
+              <p className="text-xl text-center mb-8 text-white">磁共振产品经理 | 脑科学爱好者 | Web开发爱好者</p>
+              <p className="mb-6 text-white">
                 我是一名磁共振产品经理，同时也是一名脑科学爱好者和web开发爱好者。我热衷于探索新技术并将其应用到实际项目中。
               </p>
 
