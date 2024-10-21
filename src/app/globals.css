@@ -125,3 +125,19 @@ body {
     @apply px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* 添加以下全局样式 */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#__next {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}

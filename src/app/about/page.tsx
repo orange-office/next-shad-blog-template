@@ -7,20 +7,20 @@ import Image from "next/image"
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
-      <div className="container mx-auto px-4 py-4">
-        <Card className="max-w-3xl mx-auto mt-20 relative overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-b from-background to-secondary flex items-center justify-center py-8">
+      <div className="container mx-auto px-4">
+        <Card className="max-w-3xl mx-auto relative overflow-hidden">
           <MatrixRain />
           <div className="relative z-10">
-            <CardHeader>
+            <CardHeader className="pb-4">
               <CardTitle className="text-4xl font-bold text-center">关于我</CardTitle>
               <Link href="/about" className="text-center block">
-                <p className="mb-6 hover:underline">Neontiy</p>
-                <Image src="/images/matrix-neonity-avatar.png" alt="头像" width={96} height={96} className="rounded-full mx-auto mb-4" />
+                <p className="mb-4 hover:underline">Neontiy</p>
+                <Image src="/images/matrix-neonity-avatar.png" alt="头像" width={96} height={96} className="rounded-full mx-auto" />
               </Link>
             </CardHeader>
-            <CardContent>
-              <p className="text-xl text-center mb-8 text-white">磁共振产品经理 | 脑科学爱好者 | Web开发爱好者</p>
+            <CardContent className="pt-0">
+              <p className="text-xl text-center mb-6 text-white">磁共振产品经理 | 脑科学爱好者 | Web开发爱好者</p>
               <p className="mb-6 text-white">
                 我是一名磁共振产品经理，同时也是一名脑科学爱好者和web开发爱好者。我热衷于探索新技术并将其应用到实际项目中。
               </p>

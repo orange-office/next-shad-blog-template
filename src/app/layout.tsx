@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh">
+    <html lang="zh" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,15 +36,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar />
-          <main className="flex-grow bg-background text-foreground">
-            <div className="container mx-auto px-4 py-8">
-              {children}
-            </div>
-          </main>
-          <footer className="bg-muted py-4 text-center text-sm text-muted-foreground">
-            © {new Date().getFullYear()} 我的博客. 保留所有权利。
-          </footer>
+          <div className="flex flex-col flex-grow">
+            <NavBar />
+            <main className="flex-grow bg-background text-foreground">
+              <div className="container mx-auto px-4">
+                {children}
+              </div>
+            </main>
+            <footer className="bg-muted py-4 text-center text-sm text-muted-foreground">
+              © {new Date().getFullYear()} 我的博客. 保留所有权利。
+            </footer>
+          </div>
         </ThemeProvider>
         <script
           dangerouslySetInnerHTML={{
