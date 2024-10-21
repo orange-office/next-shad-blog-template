@@ -6,15 +6,15 @@ export default function Blog() {
   const allPostsData = getSortedPostsData()
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-transparent">
       <div className="container mx-auto px-4 py-8 sm:py-16">
-        <section className="mb-12 sm:mb-16 mt-8 sm:mt-20">
+        <section className="mb-12 sm:mb-16 mt-8 sm:mt-20 bg-background/80 backdrop-blur-md rounded-lg p-6">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">博客</h1>
-          <p className="text-xl sm:text-xl mb-6 sm:mb-8">在这里,我分享我的技术见解和想法</p>
+          <p className="text-xl sm:text-xl mb-6 sm:mb-8">在这里，我分享我的技术见解和想法</p>
           <Button>创建新文章</Button>
         </section>
         
-        <section>
+        <section className="bg-background/80 backdrop-blur-md rounded-lg p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {allPostsData.map((post) => (
               <BlogCard 

@@ -8,13 +8,13 @@ export default function Home() {
   const recentPosts = allPostsData.slice(0, 8) // 只取最新的8篇文章
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-transparent text-foreground">
       <div className="container mx-auto px-4 py-8 sm:py-16">
-        <section id="home" className="mb-12 sm:mb-16 mt-8 sm:mt-20">
+        <section id="home" className="mb-12 sm:mb-16 mt-8 sm:mt-20 bg-background/70 backdrop-blur-sm rounded-lg p-6">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">欢迎来到我的个人网站</h1>
           <p className="text-lg sm:text-xl">这里是我展示项目和分享想法的地方。</p>
         </section>
-        <section className="mb-12 sm:mb-16">
+        <section className="mb-12 sm:mb-16 bg-background/70 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl sm:text-3xl font-bold mt-8 sm:mt-16 mb-6 sm:mb-8 flex items-center">
             <RocketLaunchIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-2 text-primary" />
             正在开发的项目
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </section>
         
-        <section>
+        <section className="bg-background/70 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center">
             <NewspaperIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-2 text-primary" />
             最近更新的博客

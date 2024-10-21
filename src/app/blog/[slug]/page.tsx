@@ -26,10 +26,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-transparent text-foreground mt-4">
       <div className="container mx-auto px-4 py-16">
         <article className="prose lg:prose-lg dark:prose-invert max-w-3xl mx-auto">
-          <h1>{postData.title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">{postData.title}</h1>
           <p>
             发布日期: {postData.date}
           </p>

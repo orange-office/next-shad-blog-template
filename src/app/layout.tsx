@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NavBar from '@/components/NavBar';
-
+import TechNetworkBackground from '@/components/TechNetworkBackground';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="zh" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen relative`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,19 +36,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col flex-grow">
-
+          <TechNetworkBackground className="fixed inset-0 z-10 pointer-events-none" />
+          <div className="flex flex-col flex-grow relative z-20">
             <NavBar />
-
-            <main className="flex-grow bg-background text-foreground">
-              <div className="container mx-auto px-4 mt-8">
-                {children}
-              </div>
-              <footer className="bg-muted py-4 text-center text-sm text-muted-foreground">
+            <main className="flex-grow text-foreground">
+              {children}
+            </main>
+            <footer className="bg-muted py-4 text-center text-sm text-muted-foreground">
               © {new Date().getFullYear()} 我的博客. 保留所有权利。
             </footer>
-            </main>
-
           </div>
         </ThemeProvider>
         <script
