@@ -37,15 +37,18 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex flex-col flex-grow">
+
             <NavBar />
+
             <main className="flex-grow bg-background text-foreground">
-              <div className="container mx-auto px-4">
+              <div className="container mx-auto px-4 mt-8">
                 {children}
               </div>
-            </main>
-            <footer className="bg-muted py-4 text-center text-sm text-muted-foreground">
+              <footer className="bg-muted py-4 text-center text-sm text-muted-foreground">
               © {new Date().getFullYear()} 我的博客. 保留所有权利。
             </footer>
+            </main>
+
           </div>
         </ThemeProvider>
         <script
