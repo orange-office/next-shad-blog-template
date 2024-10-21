@@ -9,7 +9,7 @@ export default function About() {
   return (
     <main className="min-h-screen">
       <div className="container mx-auto px-4 py-8 sm:py-16">
-        <section className="mb-12 sm:mb-16 mt-8 sm:mt-20 bg-background/80 backdrop-blur-md rounded-lg p-6">
+        <section className="mb-12 sm:mb-16 mt-8 sm:mt-20 bg-transparent backdrop-blur-md rounded-lg p-6">
           <Card className="max-w-3xl mx-auto relative overflow-hidden">
             <MatrixRain />
             <div className="relative z-10">
