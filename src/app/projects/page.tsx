@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-transparent text-foreground mt-4">
       <div className="container mx-auto px-4 py-16">
         <div className="flex justify-end mb-4">
         </div>

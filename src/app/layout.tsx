@@ -36,8 +36,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TechNetworkBackground className="fixed inset-0 z-10 pointer-events-none" />
-          <div className="flex flex-col flex-grow relative z-20">
+          <TechNetworkBackground className="fixed inset-0 pointer-events-none" />
+          <div className="flex flex-col flex-grow relative">
             <NavBar />
             <main className="flex-grow text-foreground">
               {children}
