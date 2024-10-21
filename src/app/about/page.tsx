@@ -8,7 +8,7 @@ import Image from "next/image"
 export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-4">
         <Card className="max-w-3xl mx-auto mt-20 relative overflow-hidden">
           <MatrixRain />
           <div className="relative z-10">
