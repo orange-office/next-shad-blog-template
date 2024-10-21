@@ -2,6 +2,7 @@
 title: 'NextJS + Shadcn/ui + Cursor 建站 简单工作流'
 date: '2024-10-18'
 excerpt: '使用NextJS + Shadcn/ui + Cursor 建站的简单工作流'
+tags: ['NextJS', 'Shadcn-ui', 'Cursor', 'blog']
 ---
 
 使用NextJS + Shadcn/ui + Cursor 建站的简单工作流

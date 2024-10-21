@@ -6,28 +6,30 @@ import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
+export interface Post {
+  date: string;
+  title: string;
+  excerpt: string;
+  id: string;
+  tags?: string[]; // 添加这一行
+}
+
 export function getSortedPostsData() {
-  // 获取 /content/posts 目录下的文件名
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
-    // 移除文件名中的 ".md" 来获取 id
     const id = fileName.replace(/\.md$/, '')
-
-    // 读取 markdown 文件作为字符串
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
-    // 使用 gray-matter 解析 post 元数据部分
     const matterResult = matter(fileContents)
 
-    // 将数据与 id 组合
     return {
       id,
       excerpt: matterResult.data.excerpt || '',
-      ...(matterResult.data as { date: string; title: string; excerpt?: string })
+      ...(matterResult.data as { date: string; title: string; excerpt?: string }),
+      tags: Array.isArray(matterResult.data.tags) ? matterResult.data.tags : []
     }
   })
-  // 按日期排序
+
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1

@@ -29,7 +29,7 @@ const BlogLayout: FC<BlogLayoutProps> = ({ children, title, date, author, tags }
           </div>
         )}
       </header>
-      <div className="prose dark:prose-invert max-w-none">
+      <div className="prose dark:prose-invert">
         {children}
       </div>
     </article>
