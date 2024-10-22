@@ -2,6 +2,7 @@ import ProjectCard from '@/components/ProjectCard'
 import BlogCard from '@/components/BlogCard'
 import { RocketLaunchIcon, NewspaperIcon } from '@heroicons/react/24/outline'
 import { getSortedPostsData } from '@/lib/posts'
+import Link from 'next/link'
 
 export default function Home() {
   const allPostsData = getSortedPostsData()
@@ -10,9 +11,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-transparent text-foreground">
       <div className="container mx-auto px-4 py-8 sm:py-16">
-        <section id="home" className="mb-12 sm:mb-16 mt-8 sm:mt-20 bg-background/70 backdrop-blur-sm rounded-lg p-6">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">欢迎来到我的个人网站</h1>
-          <p className="text-lg sm:text-xl">这里是我展示项目和分享想法的地方。</p>
+        <section id="home" className="mb-12 sm:mb-8 mt-8 sm:mt-20 bg-background/70 backdrop-blur-sm rounded-lg p-6">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">🙌欢迎来到我的个人博客</h1>
+          <p className="text-lg sm:text-xl mb-4 sm:mb-8">这里是我展示项目和分享想法的地方。</p>
+          <p className="text-lg sm:text-xl ">欢迎访问 <Link href="/projects" className="text-cyan-500 hover:underline">我的项目</Link> 和 <Link href="/blog" className="text-cyan-500 hover:underline">博客</Link> 页面，了解更多关于我的工作和想法。</p>
         </section>
         <section className="mb-12 sm:mb-16 bg-background/70 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl sm:text-3xl font-bold mt-8 sm:mt-16 mb-6 sm:mb-8 flex items-center">
@@ -24,11 +26,15 @@ export default function Home() {
               title="项目1" 
               description="这是一个正在开发的项目描述"
               link="/projects/project1"
+              tags={["标签1", "标签2"]}
+              imageUrl="/images/projects/project1.png"
             />
             <ProjectCard 
               title="项目2" 
               description="另一个正在开发的项目描述"
               link="/projects/project2" 
+              tags={["标签3", "标签4"]}
+              imageUrl="/images/projects/project2.png"
             />
             {/* 添加更多项目卡片 */}
           </div>
