@@ -72,11 +72,16 @@ const config: Config = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+  			'fall': {  // 添加樱花落下关键帧
+  				'0%': { transform: 'translateY(-10%) rotate(0deg)' },
+  				'100%': { transform: 'translateY(100vh) rotate(360deg)' },
+  			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'fall': 'fall 10s linear infinite',  // 添加樱花落下动画
   		}
   	}
   },
@@ -85,4 +90,6 @@ const config: Config = {
     require('@tailwindcss/typography'),
   ],
 };
+
+
 export default config;

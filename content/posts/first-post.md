@@ -1,155 +1,22 @@
 ---
-title: 'NextJS + Shadcn/ui + Cursor 建站 简单工作流'
-date: '2024-10-18'
-excerpt: '使用NextJS + Shadcn/ui + Cursor 建站的简单工作流'
-tags: ['NextJS', 'Shadcn-ui', 'Cursor', 'blog']
+title: 'AI早报 10月26日'
+date: '2024-10-26'
+excerpt: 'AI早报 10月26日'
+tags: ['AI早报']
 ---
 
-使用NextJS + Shadcn/ui + Cursor 建站的简单工作流
 
-- 项目初始化
-- 网站基本框架、路由的构建
+1. 智谱AI推出端到端情感语音技术，突破传统TTS局限，支持多语言和方言，用户可随时打断调节参数，使语音更自然生动。该功能已在智谱清言APP上线。
+ 
 
-## NextJS 初始化
+2. 微软推出OmniParser模型，助力GPT-4V精准理解屏幕截图内容，提升GUI自动交互能力。OmniParser通过识别可交互元素、描述功能和提取文字，使GPT-4V任务执行更准确。
 
-```Bash
-npx create-next-app@latest
-```
+3. 科大讯飞发布全新讯飞输入法14.0，引入星火端侧输入大模型，提升AI联想、预测功能，解决用户输入成本高、界面限制等问题。
 
-我一般选择使用 `src` 存储源码，也可以不用
-![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ftop-level-folders.png&w=3840&q=75)
+4. 谷歌DeepMind推出新版MusicFX DJ，让无音乐基础者也能用AI实时创作音乐。新版支持实时流播放和叠加提示词，制作专业级音频。
 
-## shadcn/ui 初始化
+5. Salesforce AI发布BLIP-3-Video多模态模型，以低成本高效处理视频理解。通过时序编码器减少视觉标记，提升计算效率，在视频问答任务中表现优异，准确率高且资源消耗低。
 
-```Bash
-npx shadcn@latest init
-```
+6. Anthropic公司更新Claude 3.5并推出新分析工具，能编写运行JavaScript代码，处理数据生成洞察。该工具类似ChatGPT代码解释器，可助力多领域提升效率，如市场营销、销售等。
 
-一般我会把shadcn/ui的组件一次性安装全一些
-
-- `npx shadcn@latest add card`
-
-```Bash
-import * as React from "react"
-
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
-export function CardWithForm() {
-  return (
-    <Card className="w-[350px]">
-      <CardHeader>
-        <CardTitle>Create project</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
-            </div>
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Framework</Label>
-              <Select>
-                <SelectTrigger id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="next">Next.js</SelectItem>
-                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                  <SelectItem value="astro">Astro</SelectItem>
-                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
-      </CardFooter>
-    </Card>
-  )
-}
-
-```
-
-## 组件篇
-
-一个黑客帝国矩阵雨的组件：
-`MatrixRain.tsx`
-```
-'use client';
-
-import React, { useEffect, useRef } from 'react';
-
-const MatrixRain: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const fontSize = 10;
-    const columns = canvas.width / fontSize;
-
-    const drops: number[] = [];
-    for (let i = 0; i < columns; i++) {
-      drops[i] = 1;
-    }
-
-    function draw() {
-      if (!ctx || !canvas) return;  // 添加这行
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = '#0F0';
-      ctx.font = `${fontSize}px monospace`;
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = characters[Math.floor(Math.random() * characters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-
-        drops[i]++;
-      }
-    }
-
-    const interval = setInterval(draw, 33);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return <canvas ref={canvasRef} className="absolute inset-0 z-0" />;
-};
-
-export default MatrixRain;
-```
+7. 阿里巴巴达摩院开源AI工具CoI-Agent，助力科研人员自动生成科研想法，提升效率。输入主题即可得关键词、问题和方法，跨多领域应用。

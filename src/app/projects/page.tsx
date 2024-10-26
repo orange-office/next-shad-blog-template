@@ -7,16 +7,16 @@ const projects = [
     description: "即本站。一个使用 NextJS + Tailwind CSS + shadcn/ui 搭建的博客。",
     link: "/projects/project1",
     tags: ["Next.js", "React", "Tailwind CSS", "shadcn/ui"],
-    image: "/images/projects/project1.png",
-    imageUrl: "/images/projects/project1.png"
+    image: "/images/liwei-avatar-preview.webp",
+    imageUrl: "/images/liwei-avatar-preview.webp"
   },
   {
     title: "项目2",
     description: "项目2是一个创新的应用,旨在解决特定问题。这里简要介绍其特点。",
     link: "/projects/project2",
     tags: ["TypeScript", "Node.js", "MongoDB"],
-    image: "/images/projects/project2.png",
-    imageUrl: "/images/projects/project2.png"
+    image: "/images/liwei-avatar-preview.webp",
+    imageUrl: "/images/liwei-avatar-preview.webp"
   },
   {
     title: "项目3",

@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { HeartIcon, XIcon, LinkIcon, Github } from "lucide-react"
 import Link from "next/link"
-import MatrixRain from "@/components/MatrixRain"
+import Sakura from "@/components/Sakura"
 import Image from "next/image"
 
 export default function About() {
@@ -11,22 +11,22 @@ export default function About() {
       <div className="container mx-auto px-4 py-8 sm:py-16">
         <section className="mb-12 sm:mb-16 mt-8 sm:mt-20 bg-transparent backdrop-blur-md rounded-lg p-6">
           <Card className="max-w-3xl mx-auto relative overflow-hidden">
-            <MatrixRain />
+            <Sakura className="absolute inset-0" />
             <div className="relative z-10">
               <CardHeader className="pb-4">
-                <CardTitle className="text-4xl font-bold text-center">关于我</CardTitle>
+                <CardTitle className="text-4xl font-bold text-center text-white">关于我</CardTitle>
                 <Link href="/about" className="text-center block">
-                  <p className="mb-4 hover:underline">Neontiy</p>
-                  <Image src="/images/matrix-neonity-avatar.png" alt="头像" width={96} height={96} className="rounded-full mx-auto" />
+                  <p className="mb-4 hover:underline text-white">Li Wei</p>
+                  <Image src="/images/liwei-avatar.jpg" alt="头像" width={96} height={96} className="rounded-full mx-auto" />
                 </Link>
               </CardHeader>
               <CardContent className="pt-0">
-                <p className="text-xl text-center mb-6 text-white">磁共振产品经理 | 脑科学爱好者 | Web开发爱好者</p>
-                <p className="mb-6 text-white">
-                  我是一名磁共振产品经理，同时也是一名脑科学爱好者和web开发爱好者。我热衷于探索新技术并将其应用到实际项目中。
+                <p className="text-xl text-center mb-6 text-white">李薇团长</p>
+                <p className="mb-6 text-white text-center">
+                  每天带给你互联网的精华内容
                 </p>
 
-                <h2 className="text-2xl font-semibold mb-4 text-center">联系我</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-center text-white">联系我</h2>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button variant="outline" size="lg" className="flex items-center gap-2">
                     <XIcon className="w-5 h-5" />

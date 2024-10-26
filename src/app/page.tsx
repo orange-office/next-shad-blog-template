@@ -27,7 +27,7 @@ export default function Home() {
               description="这是一个正在开发的项目描述"
               link="/projects/project1"
               tags={["标签1", "标签2"]}
-              imageUrl="/images/projects/project1.png"
+              imageUrl="/images/liwei-avatar-preview.webp"
             />
             <ProjectCard 
               title="项目2" 
