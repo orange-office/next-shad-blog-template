@@ -14,7 +14,7 @@ export default function Home() {
         <section id="home" className="mb-12 sm:mb-8 mt-8 sm:mt-20 bg-background/70 backdrop-blur-sm rounded-lg p-6">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-8">🙌欢迎来到我的个人博客</h1>
           <p className="text-lg sm:text-xl mb-4 sm:mb-8">这里是我展示项目和分享想法的地方。</p>
-          <p className="text-lg sm:text-xl ">欢迎访问 <Link href="/projects" className="text-cyan-500 hover:underline">我的项目</Link> 和 <Link href="/blog" className="text-cyan-500 hover:underline">博客</Link> 页面，了解更多关于我的工作和想法。</p>
+          <p className="text-lg sm:text-xl ">欢迎访问 <Link href="/projects" className="text-cyan-500 hover:underline">我的项目</Link> 和 <Link href="/blog" className="text-cyan-500 hover:underline">博客</Link> 页面，了解更多关我的工作和想法。</p>
         </section>
         <section className="mb-12 sm:mb-16 bg-background/70 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl sm:text-3xl font-bold mt-8 sm:mt-16 mb-6 sm:mb-8 flex items-center">

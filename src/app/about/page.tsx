@@ -17,7 +17,13 @@ export default function About() {
                 <CardTitle className="text-4xl font-bold text-center text-white">关于我</CardTitle>
                 <Link href="/about" className="text-center block">
                   <p className="mb-4 hover:underline text-white">Li Wei</p>
-                  <Image src="/images/liwei-avatar.jpg" alt="头像" width={96} height={96} className="rounded-full mx-auto" />
+                  <Image 
+                    src="/images/liwei-avatar.jpg" 
+                    alt="头像" 
+                    width={96} 
+                    height={96} 
+                    className="rounded-full mx-auto"
+                  />
                 </Link>
               </CardHeader>
               <CardContent className="pt-0">
